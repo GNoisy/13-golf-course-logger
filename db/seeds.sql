@@ -1,3 +1,3 @@
-INSERT INTO golf_courses (course_name, played) VALUES ("Pebbl Beach", false);
-INSERT INTO golf_courses (course_name, played) VALUES ("Bridges", true);
-INSERT INTO golf_courses (course_name, played) VALUES ("St. Andrews", false);
+INSERT INTO golf_courses (courseName, played) VALUES ("Pebble Beach", FALSE);
+INSERT INTO golf_courses (courseName, played) VALUES ("Bridges", TRUE);
+INSERT INTO golf_courses (courseName, played) VALUES ("St. Andrews", FALSE);
