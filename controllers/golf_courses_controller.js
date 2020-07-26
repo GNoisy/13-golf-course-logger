@@ -32,7 +32,7 @@ router.put("/api/golf_courses/:id", function(req, res) {
     console.log("condition", condition);
   
     course.update({
-      played: req.body.played
+      course: req.body.played
     }, condition, function(result) {
       if (result.changedRows == 0) {
         // If no rows were changed, then the ID must not exist, so 404
