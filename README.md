@@ -1,16 +1,12 @@
 # 13-golf-course-logger
 
-This is an application that allows the user to write, save, and delete notes. 
+This is an application that allows the user to log golf courses a user wants to play and checks it off list once played. This is accomplished using MySQL, Node, Express, Handlebars and a homemade ORM following MVC design flow.
 
 
-```
-This screeshot shows the html home page.
-```
-![](screenshot-homepage.png)
 
 ## Deployed Link
 
-* [See Live Site](https://infinite-depths-00124.herokuapp.com/)
+* [See Live Site](https://radiant-castle-84757.herokuapp.com/)
 
 ## Prerequisites
 
@@ -30,7 +26,7 @@ https://flight-manual.atom.io/getting-started/sections/installing-atom/
 ## Built With
 
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [Handlebars](https://handlebarsjs.com/)
 * [Node.js](https://nodejs.org/en/)
 * [Inquirer.js](https://www.npmjs.com/package/inquirer#questions)
 * [Express.js](https://expressjs.com/)
