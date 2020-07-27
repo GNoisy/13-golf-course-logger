@@ -11,3 +11,83 @@
 
 </div>
 
+<div class="play-course">
+    <h2>Golf Courses to play:</h2>
+    <ul>
+        {{#each golf_courses}}
+            {{#unless played}}
+            {{!-- <li>
+                {{courseName}}
+            </li> --}}
+                {{> golf_courses/golf played=false}}
+            {{/unless}}
+        {{/each}}
+    </ul>
+    {{!-- <ul>
+        {{#each golf_courses}}
+            <!-- unless devoured -->
+            {{#unless played}}
+            <li>
+                {{courseName}}
+
+                <!-- show a devour button -->
+                <button class="go-play" data-id="{{this.id}}" >
+                Play It!
+                </button>
+            </li>
+            {{/unless}}
+        {{/each}}
+    </ul> --}}
+</div>
+
+
+
+<div class="course-played">
+    <h2>Golf Courses that have been played::</h2>
+    <ul>
+        {{!-- {{#each golf_courses}}
+            <!-- unless devoured -->
+            {{#if played}}
+            <li>
+                {{courseName}}
+
+                <!-- show a devour button -->
+                <button class="go-play" data-id="{{this.id}}" >
+                Play!
+                </button>
+            </li>
+            {{/if}}
+        {{/each}} --}}
+        {{#each golf_courses}}
+            {{#if played}}
+            {{!-- <li>
+                {{courseName}}
+            </li> --}}
+                {{> golf_courses/golf played=true}}
+            {{/if}}
+        {{/each}}
+
+    </ul>
+
+</div>
+
+<div class="course-input">
+
+    <div class="row">
+        <div class="col">
+            <div class="adder">
+                <h2>Add a Golf Course</h2>
+                <form class="create-form">
+
+                    <div class="form-group">
+                        <label for="gCourse">Course Name:</label>
+                        <input type="text" id="gCourse" name="name">
+                    </div>
+
+                    <button type="submit">Add Course</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
