@@ -10,7 +10,7 @@ $(function() {
       var playedState = $(this).data("newsleep");
   
       var newPlayedState = {
-        played: true
+        played: "1"
       };
   
       // Send the PUT request.
@@ -38,7 +38,7 @@ $(function() {
       // };
       var newCourse = {
         courseName: $("#gCourse").val().trim(),
-        played: true
+        played: "0"
         
       };
   

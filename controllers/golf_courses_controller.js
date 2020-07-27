@@ -6,7 +6,7 @@ var course = require("../models/course.js");
 
 // // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-    course.all(function(data) {
+    course.selectAll(function(data) {
       var hbsObject = {
         golf_courses: data
       };
@@ -16,14 +16,16 @@ router.get("/", function(req, res) {
 });
   
 router.post("/api/golf_courses", function(req, res) { 
-    course.create([
+    course.insertOne([
       "courseName", "played"
     ], [
       req.body.courseName, req.body.played
     ], function(result) {
       // Send back the ID of the new quote
       res.json({ id: result.insertId });
+      console.log(result);
     });
+    
 });
   
 router.put("/api/golf_courses/:id", function(req, res) {
@@ -31,7 +33,7 @@ router.put("/api/golf_courses/:id", function(req, res) {
   
     console.log("condition", condition);
   
-    course.update({
+    course.updateOne({
       course: req.body.played
     }, condition, function(result) {
       if (result.changedRows == 0) {
