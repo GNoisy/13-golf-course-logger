@@ -6,8 +6,9 @@ $(function() {
     $(".go-play").on("click", function(event) {
       //  
   
-      var id = $(this).data("id");
-      var playedState = $(this).data("newsleep");
+      var id = $(this).attr("id");
+      console.log(id);
+      // var playedState = $(this).data("newsleep");
   
       var newPlayedState = {
         played: "1"
@@ -19,7 +20,6 @@ $(function() {
         data: newPlayedState
       }).then(
         function() {
-          console.log("course played", playedState);
           // Reload the page to get the updated list
           location.reload();
         }
